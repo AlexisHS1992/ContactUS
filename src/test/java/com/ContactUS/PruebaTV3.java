@@ -1,6 +1,6 @@
 package com.ContactUS;
 
-import org.junit.After;
+//import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class PruebaTV3 {
 
-	private WebDriver driver;
+	public WebDriver driver;
 
 	@Before
 
@@ -32,26 +32,26 @@ public class PruebaTV3 {
 		Select selectSubject = new Select(SelSubject);
 		selectSubject.selectByValue("2");
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		String pageHeading = driver.findElement(By.className("page-heading bottom-indent")).getText();
+		String pageHeading = driver.findElement(By.className("page-subheading")).getText();
 		System.out.println("Page Heading: " + pageHeading);
 
 		
-		driver.findElement(By.id("email")).sendKeys("alexisherrerasalazar9293@gmail.com");
+		driver.findElement(By.id("email")).sendKeys("alexisherrerasalazar293@gmail.com");
 		driver.findElement(By.id("id_order")).sendKeys("DAASAMXBK");
 		driver.findElement(By.id("message")).sendKeys("I would like to knows how can I buy my product with cash");
 		driver.findElement(By.id("submitMessage")).click();
 
 	}
 
-	@After
-	private void tearDown() {
-
-		driver.quit();
-	}
+	//@After
+	//public void tearDown() {
+		
+		//driver.quit();
+//	}
 
 }
